@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feliz Dia dos Pais!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <header class="hero">
+        <h1 class="fade-in">💙 Feliz Dia dos Pais 💙</h1>
+        <p class="subtitle fade-in">Uma homenagem para o melhor pai do mundo.</p>
+    </header>
+
+    <section id="gallery-section" class="content-section fade-in">
+        <h2>Nossas Memórias</h2>
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="media/img1.jpg" class="active" alt="Memória de família 1" />
+                <img src="media/img2.jpg" alt="Memória de família 2" />
+                <img src="media/img3.jpg" alt="Memória de família 3" />
+                <img src="media/img4.jpg" alt="Memória de família 4" />
+                <img src="media/img5.jpg" alt="Memória de família 5" />
+                <img src="media/img6.jpg" alt="Memória de família 6" />
+                <img src="media/img7.jpg" alt="Memória de família 7" />
+            </div>
+            <button class="carousel-btn prev">&#10094;</button>
+            <button class="carousel-btn next">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="timer-pedro-section" class="content-section fade-in">
+        <div class="timer-container">
+            <h2>O Pedro te ama há:</h2>
+            <p id="timer-pedro">Calculando...</p>
+        </div>
+    </section>
+
+    <section id="timer-julio-section" class="content-section fade-in">
+        <div class="timer-container">
+            <h2>O Julio te ama há:</h2>
+            <p id="timer-julio">Calculando...</p>
+        </div>
+    </section>
+
+    <section id="timer-marco-section" class="content-section fade-in">
+        <div class="timer-container">
+            <h2>O Marco te ama há:</h2>
+            <p id="timer-marco">Calculando...</p>
+        </div>
+    </section>
+
+    <section id="message-section" class="content-section fade-in">
+        <h2>Uma Mensagem Especial dos seus filhos</h2>
+        <div class="card">
+            <p>
+                Pai, nós te amamos muito! Obrigado por ser esse pai maravilhoso, atencioso, presente e flamenguista.
+                Você é o melhor pai que poderíamos ter! Obrigado por tudo que você faz por nós. Que seu dia seja tão
+                especial quanto você é para nós. Feliz Dia dos Pais! Nossa família te ama! 💙
+            </p>
+        </div>
+    </section>
+
+    <footer class="fade-in">
+        <div class="music-controls">
+            <button class="music-toggle">Tocar Hino do Flamengo ▶️</button>
+            <audio class="audio" src="media/hino-flamengo.mp3" loop></audio>
+        </div>
+        <div class="music-controls">
+            <button class="music-toggle">Tocar Música Dia dos Pais ▶️</button>
+            <audio class="audio" src="media/meupai-superheroi.mp3" loop></audio>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,248 @@
+
+:root {
+    --dark-blue: #0d1b2a;
+    --mid-blue: #1b263b;
+    --light-blue: #415a77;
+    --text-color: #e0e1dd;
+    --gold-accent: #ffc300;
+    --font-family: 'Montserrat', sans-serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--dark-blue);
+    color: var(--text-color);
+    text-align: center;
+    overflow-x: hidden;
+   
+}
+
+.hero {
+    background: linear-gradient(rgba(13, 27, 42, 0.8), rgba(13, 27, 42, 1)), url('https://www.toptal.com/designers/subtlepatterns/uploads/double-bubble-outline.png');
+    padding: 60px 20px;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: clamp(2.2rem, 5vw, 3rem);
+
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+   
+    margin-top: 10px;
+    color: var(--text-color);
+    font-weight: 400;
+    max-width: 90%;
+}
+
+
+.content-section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--light-blue);
+}
+
+.content-section:last-of-type {
+    border-bottom: none;
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+   
+    color: var(--text-color);
+    margin-bottom: 30px;
+    position: relative;
+}
+
+
+h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--gold-accent);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.carousel-images {
+    position: relative;
+    width: 100%;
+    padding-top: 75%;
+   
+    background-color: #000;
+}
+
+.carousel-images img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    border-radius: 15px;
+}
+
+.carousel-images img.active {
+    opacity: 1;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(255, 195, 0, 0.8);
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+
+.timer-container {
+    background-color: var(--mid-blue);
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+#timer-pedro,
+#timer-julio,
+#timer-marco {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    
+    color: var(--gold-accent);
+    font-weight: bold;
+    margin-top: 15px;
+    word-wrap: break-word;
+    
+}
+
+
+.card {
+    background-color: var(--light-blue);
+    padding: 30px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+footer {
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.music-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.music-toggle {
+    background-color: var(--gold-accent);
+    color: var(--dark-blue);
+    border: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 195, 0, 0.4);
+}
+
+.music-toggle:hover {
+    transform: scale(1.05);
+    background-color: #ffda47;
+}
+
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+@media (max-width: 480px) {
+    .timer-container {
+        padding: 30px 15px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+}
