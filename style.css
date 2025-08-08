@@ -84,22 +84,21 @@ h2::after {
     border-radius: 2px;
 }
 
-
 .carousel {
     position: relative;
     width: 100%;
     max-width: 800px;
-    height: 850px;
+    aspect-ratio: 4 / 3; /* proporção melhor controlada */
     margin: 20px auto;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
+
 .carousel-images {
     width: 100%;
     height: 100%;
-    padding-top: 75%;
     background-color: #000;
 }
 
@@ -251,17 +250,18 @@ footer {
 
 
 @media (max-width: 480px) {
-    .timer-container {
-        padding: 30px 15px;
-    }
-
-    .card {
-        padding: 20px;
+    .carousel {
+        aspect-ratio: 1 / 1; /* proporção quadrada em celulares */
     }
 
     .carousel-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 1.5rem;
+        width: 36px;
+        height: 36px;
+        font-size: 1.2rem;
+    }
+
+    .card {
+        padding: 15px;
+        font-size: 1rem;
     }
 }
